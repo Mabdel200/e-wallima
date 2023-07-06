@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>e-restaurant</title>
+      
+      <!-- Library / Plugin Css Build -->
+    <link rel="stylesheet" href="/css/libs.min.css">
+    
+      <!--
+      CSS
+      ============================================= -->
+      <link rel="stylesheet" href='/css/css/linearicons.css'>
+      <link rel="stylesheet" href='/css/css/font-awesome.min.css'>
+      <link rel="stylesheet" href='/css/css/bootstrap.css'>
+      <link rel="stylesheet" href='/css/css/magnific-popup.css'>
+      <link rel="stylesheet" href='/css/css/nice-select.css'>             
+      <link rel="stylesheet" href='/css/css/animate.min.css'>
+      <link rel="stylesheet" href='/css/css/owl.carousel.css'>      
+      <link rel="stylesheet" href='/css/css/jquery-ui.css'>     
+      <link rel="stylesheet" href='/css/css/main.css'>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+        <!-- Font Awesome -->
+       <link rel="stylesheet" href="/css/plugins/fontawesome-free/css/all.min.css">
+       <!-- Ekko Lightbox -->
+      <link rel="stylesheet" href="/css/plugins/ekko-lightbox/ekko-lightbox.css">
+      <!-- Theme style -->
+      <link rel="stylesheet" href="/css/dist/css/adminlte.min.css">
+      <link rel="stylesheet" href="/css/css/linearicons.css">
+      <link rel="stylesheet" href="/css/css/bootstrap.css">
+      <link rel="stylesheet" href="/css/css/nice-select.css">
+      <!--Boot -->      
+      <link rel="stylesheet" href="/css/boot4.css">   
+             
+      <link rel="stylesheet" href="/css/css/jquery-ui.css">     
+
+    </head>
+    <style>
+
+      .sb-card-tp {
+                    margin-bottom: 15px;
+                    padding-left: 15px;
+                    background-color: #F2F3F5;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+              }
+       .sb-card-tp .sb-card-title {
+                    width: calc(100% - 90px);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -moz-box;
+                    -moz-box-orient: vertical;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    line-clamp: 1;
+                    box-orient: vertical;
+                }
+                .sb-h3, h3 {
+                    line-height: 120%;
+                    font-size: 22px;
+                    letter-spacing: -1px;
+                }
+      .sb-card-tp .sb-price {
+                  width: 90px;
+                  height: 60px;
+                  font-weight: 500;
+                  background-color: #F5C332;
+                  font-size: 24px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+}
+
+
+
+  </style>
+  <body> 
+    <header id="header" >
+      <div class="">
+          <div class="container">                  
+          </div>
+      </div>
+      <div class="container main-menu">
+          <div class="row align-items-center justify-content-between d-flex">
+          <div id="logo">
+            <img src="/images/img_resto/images (1).png" class="img-circle" alt="" title="" style="height: 4rem; width: 4rem;" /><span style="color: white; font-family: Kunstler Script; font-size: 60px;">
+            <strong>Les delices du coin</strong></span>
+          </div>  
+            <!-- Sidebar user panel (optional) -->
+            <nav id="nav-menu-container">
+              <ul class="nav-menu"> 
+                <li class="nav-item"><a class="nav-link" href="#home">commander</a></li>
+                <li class="nav-item"><a class="nav-link" href="#me1">menu du jour</a></li>
+                <li class="nav-item"><a class="nav-link" href="#specialité">Nos spécialités</a></li>
+                <li class="nav-item"><a class="nav-link" href="#course">galéries</a></li>
+                <li class="nav-item"><a class="nav-link" href="#foot"> contacts </a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Se connecter</a></li>          
+              </ul>
+            </nav><!-- #nav-menu-container -->            
+          </div>
+        </div>
+    </header><!-- #header -->       
+      <!-- start banner Area -->
+  <section class="banner-area relative" id="home" 
+    style="background: url('/images/img_resto/restaurant-hall-with-lots-of-table.jpg') right;
+    background-size: cover;">
+        <div class="overlay">
+          <h2 class="glow" style="font-family:Algerian; text-align:center;" ><i> Laisser vous guider par nos delices </i></h2>
+      </div>  
+        <div class="container">
+              <section class="popular-course-area section-gap">
+                <div class="container">  
+                    <div class="title text-center">
+                        <h1><span class="typed-words" style="font-size: 25px;"></span></h1>
+                    </div>
+
+                    <div class="card-deck">
+                      <div class="active-popular-carusel">
+                        
+                        <!--first element-->
+                        <div class="single-popular-carusel"> 
+                          <div class="card elevation-8 " style="border-radius: 20px;">
+                              <img src="/images/img_resto/th (17).jpg" class="card-img-center img-circle elevation-3" alt="..." >
+                              
+                              <div class="sb-card-tp">
+                                <h3 class="sb-card-title">Emincés</h3>
+                                <div class="sb-price"><sub>XAF</sub> 600</div>
+                              </div>
+                              <button class="btn btn-lg btn-block" style="background-color: #f7631b; color: white;">
+                                <i class="fas fa-cart-plus fa-lg mr-1"></i>
+                                  Ajouter
+                              </button>
+                          </div>
+                        </div>
+                        <!--Second-->
+                      
+                         <div class="single-popular-carusel"> 
+                          <div class="card elevation-8 " style="border-radius: 20px;">
+                            <img src="/images/img_resto/th (4).jpg" class="card-img-center img-circle elevation-3" alt="..." style="height:10rem;">
+                           
+                              <div class="sb-card-tp">
+                                <h3 class="sb-card-title">La nordienne</h3>
+                                <div class="sb-price"><sub>XAF</sub> 300</div>
+                              </div>
+                              <button class="btn btn-lg btn-block" style="background-color: #f7631b; color: white;">
+                                <i class="fas fa-cart-plus fa-lg mr-1"></i>
+                                  Ajouter
+                              </button>
+                          </div>
+                        </div>
+                        <!--third--> 
+                        <div class="single-popular-carusel"> 
+                          <div class="card elevation-8 " style="border-radius: 20px;">
+                            <img src="/images/img_resto/th (6).jpg" class="card-img-center img-circle elevation-3" alt="..." style="height:10rem;">
+                         
+                              <div class="sb-card-tp">
+                                <h3 class="sb-card-title">La senegalaise</h3>
+                                <div class="sb-price"><sub>XAF</sub> 600</div>
+                              </div>
+                              <button class="btn btn-lg btn-block" style="background-color: #f7631b; color: white;">
+                                <i class="fas fa-cart-plus fa-lg mr-1"></i>
+                                  Ajouter
+                              </button>
+                          </div>
+                        </div>  
+
+                        <!--four--> 
+
+                        <div class="single-popular-carusel"> 
+                          <div class="card elevation-8 " style="border-radius: 20px;">
+                            <img src="/images/img_resto/th (8).jpg" class="card-img-center img-circle elevation-3" alt="..." style="height:10rem;">
+                           
+                              <div class="sb-card-tp">
+                                <h3 class="sb-card-title">Special chef</h3>
+                                <div class="sb-price"><sub>XAF</sub> 900</div>
+                              </div>
+                              <button class="btn btn-lg btn-block" style="background-color: #f7631b; color: white;">
+                                <i class="fas fa-cart-plus fa-lg mr-1"></i>
+                                  Ajouter
+                              </button>
+                          </div>
+                        </div>  
+                        <!--five--> 
+                        
+                        <div class="single-popular-carusel"> 
+                          <div class="card elevation-8 " style="border-radius: 20px;">
+                            <img src="/images/img_resto/th (8).jpg" class="card-img-center img-circle elevation-3" alt="..." style="height:10rem;">
+                        
+                              <div class="sb-card-tp">
+                                <h3 class="sb-card-title">Traditionnel</h3>
+                                <div class="sb-price"><sub>XAF</sub> 300</div>
+                              </div>
+                              <button class="btn btn-lg btn-block" style="background-color: #f7631b; color: white;">
+                                <i class="fas fa-cart-plus fa-lg mr-1"></i>
+                                  Ajouter
+                              </button>
+                          </div>
+                        </div>  
+                       <!--six-->
+                       <div class="single-popular-carusel"> 
+                        <div class="card elevation-8 " style="border-radius: 20px;">
+                          <img src="/images/img_resto/th (24).jpg" class="card-img-center img-circle elevation-3" alt="..." style="height:10rem;">
+
+                            <div class="sb-card-tp">
+                              <h3 class="sb-card-title">Chantounaise</h3>
+                              <div class="sb-price"><sub>XAF</sub> 700</div>
+                            </div>
+                            <button class="btn btn-lg btn-block" style="background-color: #f7631b; color: white;">
+                              <i class="fas fa-cart-plus fa-lg mr-1"></i>
+                                Ajouter
+                            </button>
+                        </div>
+                      </div>  
+                      
+                      <!--end-->
+                    </div>
+                  </div>               
+                </div>
+                <span class="title text-center" style="font-family: Algerian;">
+                    <h2 class="glow"><img src="/images/img_resto/images (2).png" class="card-img-center img-circle elevation-3" alt="..." style="height:5rem;"><b><i>Menu du jour</i></b></h2> 
+                </span>   
+              </section> 
+        </div>          
+      </section>
+      <!-- End banner Area -->
+
+      <!-- Start feature Area -->
+      <section class="feature-area" id="me1">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 elevation-8">
+              <div class="single-feature text-black">
+                <div class="title text-black" style="background-color: #f7631b;">
+                  <h4>e-restaurant est la pour vous !</h4>
+                </div>
+                <div class="desc-wrap">
+                  <p>
+                    Plus proche de vous. plus besoin de se deplacer pour manger. 
+                  </p>                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 elevation-8">
+              <div class="single-feature" style="border-radius: 10px;">
+                <div class="title text-black" style="background-color: #f7631b;">
+                  <h4>Notre devise *</h4>
+                </div>
+                <div class="desc-wrap">
+                  <ul>
+                      <li>Qualitee</li>
+                      <li>Flexibillite</li>
+                      <li>Efficacite</li>   
+                  </ul>                    
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 elevation-8">
+              <div class="single-feature">
+                <div class="title text-black" style="background-color: #f7631b;">
+                  <h4>A votre service *</h4>
+                </div>
+                <div class="desc-wrap">
+                  <p>
+                      Une equipe prete h/24 a recevoir vos commande.
+                  </p>
+                                    
+                </div>
+              </div>
+            </div>                        
+          </div>
+        </div>  
+      </section>
+      <!-- End feature Area -->
+          
+      <!-- Start popular-course Area -->
+      <section class="popular-course-area section-gap" id="specialité">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-70">
+              <div class="title text-center">
+                <h1 class="mb-12">UN RESTAURANT DE PURE BONHEUR À VOTRE PORTÉE</h1>
+                <h3>Découvrez nos spécialitées</h3>
+              </div>
+            </div>
+          </div>            
+          <div class="row">
+            <div class="active-popular-carusel">
+              <div class="single-popular-carusel">
+                <div class="details">
+                  <a href="#">
+                    <h4>
+                     <img src="/images/img_resto/images (2).png" class="card-img-center img-circle elevation-4" alt="..." style="height:10rem; width: 10rem;"> 
+                    </h4>
+                  </a>
+                  <p class="text-justify">
+                    Un restaurant c'est d'abord un ami et un partenaire .                
+                  </p>
+                </div>
+              </div>  
+              <div class="single-popular-carusel">
+              
+                <div class="details">
+                  <a href="#">
+                    <h4>
+                      <img src="/images/img_resto/th (4).jpg" class=" img-circle elevation-4" alt="..." style="height:10rem; width: 10rem;">
+                    </h4>
+                  </a>
+                  <p class="text-justify">
+                    e-restaurant vous propose des plats ,des menus et specialitées de nos chefs en continu
+                    et en temps reel.
+                  </p>
+                </div>
+              </div>  
+              <div class="single-popular-carusel">
+                
+                <div class="details">
+                  <a href="#">
+                    <h4>
+                      <img src="/images/img_resto/th (1).jpg" class=" img-circle elevation-4" alt="..." style="height:10rem; width: 10rem;">
+                    </h4>
+                  </a>
+                  <p class="text-justify">
+                    e-restaurant vous propose des plats ,des menus et specialitées de nos chefs en continu
+                    et en temps reel.
+                  </p>
+                </div>
+              </div>  
+              <div class="single-popular-carusel">
+                
+                <div class="details">
+                  <a href="#">
+                    <h4>
+                      <img src="/images/img_resto/th (2).jpg" class=" img-circle elevation-4" alt="..." style="height:10rem; width: 10rem;">
+                    </h4>
+                  </a>
+                  <p class="text-justify">
+                    e-restaurant vous propose des plats ,des menus et specialitées de nos chefs en continu
+                    et en temps reel.
+                  </p>
+                </div>
+              </div>
+              <div class="single-popular-carusel">
+                
+                <div class="details">
+                  <a href="#">
+                    <h4>
+                      <img src="/images/img_resto/th (3).jpg" class=" img-circle elevation-4" alt="..." style="height:10rem; width: 10rem;">
+                    </h4>
+                  </a>
+                  <p class="text-justify">
+                    e-restaurant vous propose des plats ,des menus et specialitées de nos chefs en continu
+                    et en temps reel.        
+                  </p>
+                </div>
+              </div>  
+              <div class="single-popular-carusel">
+                
+                <div class="details">
+                  <a href="#">
+                    <h4>
+                      <img src="/images/img_resto/th (6).jpg" class=" img-circle elevation-4" alt="..." style="height:10rem; width: 10rem;">
+                    </h4>
+                  </a>
+                  <p class="text-justify">
+                    e-restaurant vous propose des plats ,des menus et specialitées de nos chefs en continu
+                    et en temps reel.                  
+                  </p>
+                </div>
+              </div>  
+              <div class="single-popular-carusel">
+                
+                <div class="details">
+                  <a href="#">
+                    <h4>
+                      <img src="/images/img_resto/th (7).jpg" class=" img-circle elevation-4" alt="..." style="height:10rem; width: 10rem;">
+                    </h4>
+                  </a>
+                  <p class="text-justify">
+                    e-restaurant vous propose des plats ,des menus et specialitées de nos chefs en continu
+                    et en temps reel.
+                  </p>
+                </div>
+              </div>  
+              <div class="single-popular-carusel">
+                
+                <div class="details">
+                  <a href="#">
+                    <h4>
+                      <img src="/images/img_resto/th (8).jpg" class=" img-circle elevation-4" alt="..." style="height:10rem; width: 10rem;">
+                    </h4>
+                  </a>
+                  <p class="text-justify">
+                    e-restaurant vous propose des plats ,des menus et specialitées de nos chefs en continu
+                    et en temps reel.
+                  </p>
+                </div>
+              </div>              
+            </div>
+          </div>
+        </div>  
+      </section>
+      <!-- End popular-course Area -->
+    
+    <!-- Start cta-one Area -->
+    <section class="container-fluid" id="course">
+      <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-70">
+              <div class="title text-center">
+                <h2 class="mb-12">GALERIES</h2>
+              </div>
+            </div>
+          </div>            
+        <div class="">
+          <div class="justify-content-center">
+            <div class="wrap">
+              
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="card card-primary elevation-5" style="border-radius: 15px;">
+                        <div class="card-header" style="background-color: white; border-radius: 15px 15px 0px 0px;">
+                          
+                            <div class="btn-group w-100 mb-2">
+                              <a class="btn active" href="javascript:void(0)" data-filter="all" style="background-color: #f7631b;">Tout les menus</a>
+                              <a class="btn" href="javascript:void(0)" data-filter="1" style="background-color: #f7631b;">les mets </a>
+                              <a class="btn" href="javascript:void(0)" data-filter="2" style="background-color: #f7631b;"> Category 2 (BLACK) </a>
+                              <a class="btn" href="javascript:void(0)" data-filter="3" style="background-color: #f7631b;"> Category 3 (COLORED) </a>
+                              <a class="btn" href="javascript:void(0)" data-filter="4" style="background-color: #f7631b;"> Category 4 (COLORED, BLACK) </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                          
+                          <div>
+                            <div class="filter-container p-0 row">
+                              <div class="filtr-item col-sm-2" data-category="1" data-sort="white sample">
+                                <a href="https://via.placeholder.com/1200/FFFFFF.png?text=1" data-toggle="lightbox" data-title="sample 1 - white">
+                                  <img src="/images/img_resto/th (8).jpg" class="img-fluid mb-2" alt="white sample" style="height: 10rem;" />
+                                </a>
+                              </div>
+                              <div class="filtr-item col-sm-2" data-category="2, 4" data-sort="black sample">
+                                <a href="https://via.placeholder.com/1200/000000.png?text=2" data-toggle="lightbox" data-title="sample 2 - black">
+                                  <img src="assets/img°resto/th (7).jpg" class="img-fluid mb-2" alt="black sample" style="height: 10rem;"/>
+                                </a>
+                              </div>
+                              <div class="filtr-item col-sm-2" data-category="3, 4" data-sort="red sample">
+                                <a href="https://via.placeholder.com/1200/FF0000/FFFFFF.png?text=3" data-toggle="lightbox" data-title="sample 3 - red">
+                                  <img src="/images/img_resto/th (6).jpg" class="img-fluid mb-2" alt="red sample" style="height: 10rem;"/>
+                                </a>
+                              </div>
+                              <div class="filtr-item col-sm-2" data-category="3, 4" data-sort="red sample">
+                                <a href="https://via.placeholder.com/1200/FF0000/FFFFFF.png?text=4" data-toggle="lightbox" data-title="sample 4 - red">
+                                  <img src="/images/img_resto/th (5).jpg" class="img-fluid mb-2" alt="red sample"style="height: 10rem;"/>
+                                </a>
+                              </div>
+                              <div class="filtr-item col-sm-2" data-category="2, 4" data-sort="black sample">
+                                <a href="https://via.placeholder.com/1200/000000.png?text=5" data-toggle="lightbox" data-title="sample 5 - black">
+                                  <img src="/images/img_resto/th (4).jpg" class="img-fluid mb-2" alt="black sample" style="height: 10rem;"/>
+                                </a>
+                              </div>
+                              <div class="filtr-item col-sm-2" data-category="1" data-sort="white sample">
+                                <a href="https://via.placeholder.com/1200/FFFFFF.png?text=6" data-toggle="lightbox" data-title="sample 6 - white">
+                                  <img src="/images/img_resto/th (3).jpg" class="img-fluid mb-2" alt="white sample" style="height: 10rem;"/>
+                                </a>
+                              </div>
+                              <div class="filtr-item col-sm-2" data-category="1" data-sort="white sample">
+                                <a href="https://via.placeholder.com/1200/FFFFFF.png?text=7" data-toggle="lightbox" data-title="sample 7 - white">
+                                  <img src="/images/img_resto/th (2).jpg" class="img-fluid mb-2" alt="white sample" style="height: 10rem;"/>
+                                </a>
+                              </div>
+                              <div class="filtr-item col-sm-2" data-category="2, 4" data-sort="black sample">
+                                <a href="https://via.placeholder.com/1200/000000.png?text=8" data-toggle="lightbox" data-title="sample 8 - black">
+                                  <img src="/images/img_resto/th (1).jpg" class="img-fluid mb-2" alt="black sample" style="height: 10rem;"/>
+                                </a>
+                              </div>
+                              <div class="filtr-item col-sm-2" data-category="3, 4" data-sort="red sample">
+                                <a href="https://via.placeholder.com/1200/FF0000/FFFFFF.png?text=9" data-toggle="lightbox" data-title="sample 9 - red">
+                                  <img src="/images/img_resto/th (9).jpg" class="img-fluid mb-2" alt="red sample" style="height: 10rem;"/>
+                                </a>
+                              </div>
+                              <div class="filtr-item col-sm-2" data-category="1" data-sort="white sample">
+                                <a href="https://via.placeholder.com/1200/FFFFFF.png?text=10" data-toggle="lightbox" data-title="sample 10 - white">
+                                  <img src="/images/img_resto/th (10).jpg" class="img-fluid mb-2" alt="white sample" style="height: 10rem;"/>
+                                </a>
+                              </div>
+                              <div class="filtr-item col-sm-2" data-category="1" data-sort="white sample">
+                                <a href="https://via.placeholder.com/1200/FFFFFF.png?text=11" data-toggle="lightbox" data-title="sample 11 - white">
+                                  <img src="/images/img_resto/th (12).jpg" class="img-fluid mb-2" alt="white sample" style="height: 10rem;"/>
+                                </a>
+                              </div>
+                              <div class="filtr-item col-sm-2" data-category="2, 4" data-sort="black sample">
+                                <a href="https://via.placeholder.com/1200/000000.png?text=12" data-toggle="lightbox" data-title="sample 12 - black">
+                                  <img src="/images/img_resto/th (13).jpg" class="img-fluid mb-2" alt="black sample" style="height: 10rem;"/>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- /.container-fluid -->
+            </div>          
+          </div>
+        </div>  
+   </section>
+
+      <!-- End cta-one Area -->
+      <!-- Start blog Area -->
+      
+      
+      <!-- Start cta-one Area -->
+      <!-- End cta-one Area -->
+      <!-- Start blog Area -->
+      <!-- End popular-course Area -->
+      <!-- End blog Area --> 
+      <!-- Start cta-two Area -->
+
+      <!-- End cta-two Area -->
+            
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src='/js/js/vendor/jquery-2.2.4.min.js'></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src='/js/js/vendor/bootstrap.min.js'></script>     
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+        <script src='/js/js/easing.min.js'></script>     
+      <script src='/js/js/hoverIntent.js'></script>
+      <script src='/js/js/superfish.min.js')></script>  
+      <script src='/js/js/jquery.ajaxchimp.min.js'></script>
+      <script src='/js/js/jquery.magnific-popup.min.js'></script>  
+        <script src='/js/js/jquery.tabs.min.js'></script>            
+      <script src='/js/js/jquery.nice-select.min.js'></script> 
+      <script src='/js/js/owl.carousel.min.js'></script>                 
+      <script src='/js/js/mail-script.js'></script>  
+      <script src='/js/js/main.js'></script> 
+
+      <!-- jQuery -->
+      <script src="/js/plugins/jquery/jquery.min.js"></script>
+      <!-- Bootstrap -->
+      <script src="/js/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- Ekko Lightbox -->
+      <script src="/js/plugins/ekko-lightbox/ekko-lightbox.min.js"></script>
+      <!-- AdminLTE App -->
+      <script src="/js/dist/js/adminlte.min.js"></script>
+      <!-- Filterizr-->
+      <script src="/js/plugins/filterizr/jquery.filterizr.min.js"></script>
+      <!-- AdminLTE for demo purposes -->
+      <script src="/js/dist/js/demo.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+          <script src="/js/js/vendor/jquery-2.2.4.min.js"></script>
+      <!-- Filterizr-->
+      <script src="/js/plugins/filterizr/jquery.filterizr.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="/js/js/vendor/bootstrap.min.js"></script>     
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+        <script src="/js/js/easing.min.js"></script>     
+      <script src="/js/js/hoverIntent.js"></script>
+      <script src="/js/js/superfish.min.js"></script>  
+      <script src="/js/js/jquery.ajaxchimp.min.js"></script>
+      <script src="/js/js/jquery.magnific-popup.min.js"></script>  
+        <script src="/js/js/jquery.tabs.min.js"></script>            
+      <script src="/js/js/jquery.nice-select.min.js"></script> 
+      <script src="/js/js/owl.carousel.min.js"></script>                 
+      <script src="/js/js/mail-script.js"></script>  
+        <!-- typed word -->
+        <script src="/js/js/typed.js "></script>
+      <script>
+      
+      var typed = new Typed('.typed-words', {
+          strings: [" Sentez vous libre !!!! ", " Passez vos commandes <img src='/images/img_resto/th (31).jpg' class='img-circle elevation-3' alt='...' style='height:3rem; width:5rem;'> ", " savourez nos délices <img src='/images/img_resto/th (10).jpg' class='img-circle' alt='...' style='height:3rem; width:4rem;'> "," faites-nous confiance!!!!!!!! "],
+          typeSpeed: 50,
+          backSpeed: 50,
+          backDelay: 4000,
+          startDelay: 1000,
+          loop: true,
+          showCursor: true
+      });
+  </script>
+<!-- Page specific script -->
+<script>
+  $(function () {
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+      event.preventDefault();
+      $(this).ekkoLightbox({
+        alwaysShowClose: true
+      });
+    });
+
+    $('.filter-container').filterizr({gutterPixels: 3});
+    $('.btn[data-filter]').on('click', function() {
+      $('.btn[data-filter]').removeClass('active');
+      $(this).addClass('active');
+    });
+  })
+</script>
+
+  
+<footer class="footer-area section-gap" id="foot">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2 col-md-6 col-sm-6">
+              <div class="single-footer-widget">
+                <h4>Notre site</h4>
+                <ul>
+                  <li><a href="#">Les delices du coin info</a></li>
+                  <li><a href="#">Ouverture :08:00</a></li>
+                  <li><a href="#">Fermeture :18:00</a></li>
+                  
+                </ul>               
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="single-footer-widget">
+                <h4>Contact</h4>
+                <ul>
+              
+                                  <li><a href="#">Tel: +237 694 74 60 41</a></li>
+                  <li><a href="#">Fax: +237 698 68 69 34</a></li>
+                  <li><a href="#">B.P: 46 Maroua</a></li>
+                
+                </ul>               
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="single-footer-widget">
+                <h4>Site web-Email</h4>
+                <ul>
+
+
+                  <li><a href="#">Url: www.Les delices du coin.cm</a></li>
+                  <li><a href="#">E-mail : les@delicesducoin.cm</a></li>
+                  
+                </ul>               
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+              <div class="single-footer-widget">
+                <h4>Liens </h4>
+                <ul>
+                  <li><a href="#">Accessibilité</a></li>
+                  <li><a href="#">Vie Associative</a></li>
+                  <li><a href="#">MI – UNChat</a></li>
+                </ul>               
+              </div>
+            </div>          
+            <div class="col-lg-2 col-md-6 col-sm-6">
+              <div class="single-footer-widget">
+                <h4>Réseaux sociaux</h4>
+                <ul>
+                  <li><a href="#"><i class="fa fa-facebook"></i></a> Facebook</li>
+                  <li><a href="#"></i></a>Twitter</li>
+                  <li><a href="#"><i class="fa fa-youtube"></i></a>Youtube
+              </li>
+                
+                </ul>               
+              </div>
+            </div>                                    
+                        
+          </div>
+          <div class="footer-bottom row align-items-center justify-content-between">
+            <p class="footer-text m-0 col-lg-6 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved    
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <div class="col-lg-6 col-sm-12 footer-social">
+              
+              
+              
+            </div>
+          </div>            
+        </div>
+      </footer> 
+      <!-- End footer Area -->  
+    </body>
+  </html>
